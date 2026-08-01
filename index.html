@@ -5,12 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Football Reminder</title>
   <meta name="description" content="Football Reminder は、お気に入りのサッカーチーム・大会の試合を追跡し、キックオフ前にリマインド通知を受け取れる iOS アプリです。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Football Reminder">
+  <meta property="og:title" content="Football Reminder - サッカーの試合、見逃さない。">
+  <meta property="og:description" content="お気に入りのサッカーチーム・大会の試合を追跡し、キックオフ前にリマインド通知を受け取れる iOS アプリ。">
+  <meta property="og:url" content="https://football-reminder.com/">
+  <meta property="og:image" content="https://football-reminder.com/images/ogp.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/app-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
-    <h1>Football Reminder</h1>
-    <p class="meta">サッカーの試合リマインダーアプリ / Match reminders for football fans</p>
+    <div class="hero">
+      <img class="app-icon" src="images/app-icon.png" alt="Football Reminder アプリアイコン" width="96" height="96">
+      <h1>Football Reminder</h1>
+      <p class="meta">サッカーの試合、見逃さない。 / Match reminders for football fans</p>
+      <a class="store-badge" href="https://apps.apple.com/app/football-reminder/id6775495012">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/ja-jp" alt="App Store でダウンロード" height="54">
+      </a>
+    </div>
 
     <p>
       Football Reminder は、お気に入りのサッカーチーム・大会の試合を追跡し、キックオフ前にリマインド通知を受け取れる iOS アプリです。
@@ -21,7 +36,13 @@
       reminder notifications before kickoff.
     </p>
 
-    <p><a href="https://apps.apple.com/app/football-reminder/id6775495012">App Store でダウンロード / Download on the App Store</a></p>
+    <h2>スクリーンショット / Screenshots</h2>
+    <div class="screenshots">
+      <img src="images/01_match_list.png" alt="試合一覧画面 / Match list" loading="lazy" width="320" height="692">
+      <img src="images/02_filter.png" alt="大会・チームでの絞り込み / Filter by competition and team" loading="lazy" width="320" height="692">
+      <img src="images/03_subscription_tree.png" alt="チーム・大会の購読設定 / Subscription settings" loading="lazy" width="320" height="692">
+      <img src="images/04_reminder_settings.png" alt="リマインダー時刻の設定 / Reminder time settings" loading="lazy" width="320" height="692">
+    </div>
 
     <h2>リンク / Links</h2>
     <ul>
@@ -37,5 +58,14 @@
   <footer>
     &copy; 2026 Football Reminder
   </footer>
+  <script>
+    // ブラウザ言語が日本語以外なら英語版スクリーンショットに差し替える（?lang=ja / ?lang=en で強制切替可）
+    var lang = new URLSearchParams(location.search).get("lang") || navigator.language || "ja";
+    if (!lang.startsWith("ja")) {
+      document.querySelectorAll(".screenshots img").forEach(function (img) {
+        img.src = img.getAttribute("src").replace("images/", "images/en/");
+      });
+    }
+  </script>
 </body>
 </html>

@@ -82,6 +82,47 @@ th {
   margin-bottom: 32px;
 }
 
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero .app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero h1 {
+  margin-top: 16px;
+}
+
+.hero .meta {
+  margin-bottom: 20px;
+}
+
+.store-badge img {
+  height: 54px;
+  width: auto;
+}
+
+.screenshots {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshots img {
+  width: 240px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
 .lang-divider {
   margin: 64px 0 48px;
   border: none;
