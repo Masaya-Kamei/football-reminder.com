@@ -148,3 +148,38 @@ footer {
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
+
+/* 3 列以上の比較表がモバイルで横溢れするのを防ぐ（規約のストア別比較表など） */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 日本語は任意位置で改行できるため min-content 幅が小さく、min-width を与えないと
+   狭い画面で列が押し潰されるだけでスクロールが発生しない。 */
+.table-scroll table {
+  min-width: 560px;
+  width: auto;
+}
+
+/* 特商法表記の「項目 / 内容」2 列表。比較表と違い横スクロールは不要なので
+   .table-scroll には載せず、見出し列を折り返しつつ幅を固定する。 */
+.kv-table th {
+  white-space: normal;
+  width: 30%;
+}
+
+.kv-table td {
+  overflow-wrap: anywhere;
+}
+
+/* 審査担当者向け中継ページの主導線。1 画面に 1 つだけ置く。 */
+.unlock-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}

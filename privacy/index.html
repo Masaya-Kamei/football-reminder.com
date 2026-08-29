@@ -10,11 +10,15 @@
   <div class="site-header"><a href="../">&larr; Football Reminder</a></div>
   <main>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">制定日: 2026年7月11日（English version follows the Japanese version.）</p>
+    <p class="meta">制定日: 2026年7月11日 / 最終更新日: 2026年8月23日（English version follows the Japanese version.）</p>
 
     <p>
-      iOS アプリケーション「Football Reminder」（以下「本アプリ」）の運営者（以下「運営者」）は、本アプリにおける
-      ユーザーの情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
+      モバイルアプリケーション「Football Reminder」（iOS 版および Android 版。以下「本アプリ」）の運営者（以下「運営者」）は、
+      本アプリにおけるユーザーの情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
+    </p>
+
+    <p>
+      <strong>アカウントとデータの削除をご希望の方は、<a href="#data-deletion">「4. 保存期間と削除」</a>をご覧ください。</strong>
     </p>
 
     <h2>1. 収集する情報</h2>
@@ -35,7 +39,7 @@
       </tr>
       <tr>
         <td>サブスクリプション情報</td>
-        <td>Pro プランの購入状態と購入・更新イベントの詳細（プラン種別、有効期限、取引識別子、購入価格・通貨、ストアの国を含む）。有料機能の提供・管理に使用します。クレジットカード番号等の決済情報は Apple が処理し、運営者は取得しません。</td>
+        <td>Pro プランの購入状態と購入・更新イベントの詳細（プラン種別、有効期限、取引識別子、購入価格・通貨、ストアの国を含む）。有料機能の提供・管理と、<strong>購読状況の分析（継続率などの集計）</strong>に使用します。クレジットカード番号等の決済情報は、ご利用のストア（iOS は Apple、Android は Google）が処理し、運営者は取得しません。</td>
       </tr>
       <tr>
         <td>通知の配信記録</td>
@@ -43,7 +47,7 @@
       </tr>
       <tr>
         <td>クラッシュ・診断情報</td>
-        <td>アプリのクラッシュログ、端末機種、OS バージョン、アプリバージョン、匿名ユーザー ID。不具合の調査・品質改善に使用します。</td>
+        <td>アプリのクラッシュログ、端末機種、OS バージョン、アプリバージョン、匿名ユーザー ID。個別の不具合の調査に使用するほか、<strong>発生状況の分析（端末・OS・アプリバージョン別の発生傾向などの集計）</strong>による品質・安定性の改善に使用します。</td>
       </tr>
     </table>
     <p>
@@ -53,40 +57,75 @@
     <h2>2. 利用目的と法的根拠</h2>
     <ul>
       <li>試合リマインダー等、本アプリの機能の提供</li>
-      <li>有料プラン（サブスクリプション）の管理</li>
-      <li>不具合の調査、品質・安定性の改善</li>
+      <li>有料プラン（サブスクリプション）の管理と、購読状況の分析</li>
+      <li>不具合の調査と、発生状況の分析による品質・安定性の改善</li>
       <li>利用規約違反・不正利用への対応</li>
     </ul>
     <p>運営者は、収集した情報を広告目的で利用せず、第三者に販売しません。</p>
     <p>
       EU/EEA 圏のユーザーに対する処理の法的根拠（GDPR 第 6 条）は次のとおりです:
       本アプリの機能提供およびサブスクリプション管理は<strong>契約の履行</strong>（第 6 条 1 項 (b)）、
-      クラッシュ・診断情報の収集および不正利用への対応は<strong>正当な利益</strong>（同項 (f)。サービスの品質・安全性の確保という利益）、
+      クラッシュ・診断情報の収集と分析、不正利用への対応、および購読状況の分析は<strong>正当な利益</strong>（同項 (f)。サービスの品質・安全性の確保と、サービス改善のための利用状況の把握という利益）、
       プッシュ通知トークンの取得は<strong>同意</strong>（同項 (a)。OS の通知許可）に基づきます。
       本アプリは、プロファイリングを含む自動化された意思決定を行いません。
     </p>
 
     <h2>3. 外部サービス</h2>
     <p>本アプリは、機能の提供のために以下の外部サービスを利用しており、以下の情報がこれらのサービスに送信・保存されます。運営者は、これらの第三者が本ポリシーに定めるのと同等のユーザーデータ保護を提供することを確認しています。</p>
+    <div class="table-scroll">
     <table>
       <tr><th>サービス</th><th>用途</th><th>送信される情報</th></tr>
       <tr><td>Supabase（データベース・認証）</td><td>匿名認証、設定・サブスクリプション状態の保存</td><td>匿名ユーザー ID、アプリ内設定、プッシュ通知トークン、サブスクリプション情報、通知の配信記録。データの保存先は日本（東京リージョン）です。</td></tr>
-      <tr><td>Apple（App Store / StoreKit）</td><td>サブスクリプションの決済処理</td><td>購入操作に伴う決済情報（OS を通じて Apple が直接処理）</td></tr>
+      <tr><td>Apple（App Store / StoreKit）<br>※ iOS 版のみ</td><td>サブスクリプションの決済処理</td><td>購入操作に伴う決済情報（OS を通じて Apple が直接処理）</td></tr>
+      <tr><td>Google（Google Play Billing）<br>※ Android 版のみ</td><td>サブスクリプションの決済処理</td><td>購入操作に伴う決済情報（OS を通じて Google が直接処理）</td></tr>
       <tr><td>RevenueCat</td><td>サブスクリプション状態の管理・購入イベントの処理</td><td>匿名ユーザー ID、購入・更新イベント情報、端末情報（機種・OS バージョン）、最終利用日時</td></tr>
-      <tr><td>Expo（Expo Push Service）</td><td>プッシュ通知の配信</td><td>プッシュ通知トークン、通知の内容</td></tr>
+      <tr><td>Expo（Expo Push Service）</td><td>プッシュ通知の配信</td><td>プッシュ通知トークン、通知の内容。配信にあたり、各 OS のプッシュ配信基盤（iOS: Apple APNs / Android: Google Firebase Cloud Messaging）へ転送されます。</td></tr>
       <tr><td>Sentry</td><td>クラッシュ・診断情報の収集と分析</td><td>クラッシュログ、端末機種、OS・アプリバージョン、匿名ユーザー ID</td></tr>
     </table>
+    </div>
     <p>
-      一部の外部サービス（RevenueCat / Expo / Sentry 等）は日本国外（主に米国）にサーバーを有します。EU/EEA 圏からの
-      データ移転については、標準契約条項（SCC）または EU-US Data Privacy Framework（DPF）等の適切な保護措置に依拠します
-      （2026 年 7 月時点: Sentry・Expo は DPF 認証済み、RevenueCat は SCC。保護措置の写しの入手は下記連絡先までご請求ください）。なお、Supabase のデータ保存先である日本は、欧州委員会から十分性認定を受けています。各サービスのプライバシーポリシーは各社のサイトをご確認ください。
+      第 3 節に記載した外部サービスには、日本国外にサーバーを置くもの、または日本国外の法人を契約の相手方とするものがあります。
+      EU/EEA・英国・スイスからのデータ移転は、2026 年 8 月時点で、次のいずれかの適切な保護措置によってカバーされています。
+    </p>
+    <ul>
+      <li><strong>Data Privacy Framework（EU-U.S. DPF / UK Extension / Swiss-U.S. DPF）の認証</strong>: Sentry（Functional Software, Inc.）、Expo（650 Industries, Inc.）、Google LLC</li>
+      <li><strong>標準契約条項（SCC）</strong>: Supabase（契約の相手方は Supabase Pte. Ltd／シンガポール）、RevenueCat。Apple については、EU/EEA・英国・スイスの個人データを Apple Distribution International Limited（アイルランド）が管理し、Apple 自身による国際移転が SCC に基づいて行われます</li>
+    </ul>
+    <p>
+      保護措置の写しの入手は、下記の連絡先までご請求ください。
+      Supabase に保存されるデータのリージョンは日本（東京）ですが、契約の相手方はシンガポール法人であるため、移転根拠は上記の SCC です。
+      各サービスの詳細は、各社のプライバシーポリシーをご確認ください。
       なお、試合データの取得元 API にユーザーの情報が送信されることはありません。
     </p>
 
-    <h2>4. 保存期間と削除</h2>
+    <h2 id="data-deletion">4. 保存期間と削除</h2>
+
+    <h3>アカウントとデータの削除をリクエストする方法</h3>
+    <p>
+      本アプリの<strong>設定画面 &gt; アカウントを削除</strong>から、いつでもご自身でアカウントを削除できます。
+      アプリをすでに削除された場合や、アプリから操作できない場合は、
+      <a href="mailto:support@football-reminder.com">support@football-reminder.com</a> までご連絡ください。
+      <strong>ご連絡から 30 日以内に削除します。</strong>
+    </p>
+    <p>
+      ⚠️ <strong>本アプリは匿名認証のみを使用しており、氏名・メールアドレス等からアカウントを特定することができません。</strong>
+      メールでご請求いただく際は、アカウントを特定できる情報（Pro プランをご購入いただいた場合は、ストアの注文 ID）をお知らせください。
+      特定できない場合、運営者は削除の可否をご案内できないことがあります。<strong>アプリを起動できる場合は、アプリ内から削除いただくのが確実です。</strong>
+    </p>
+    <p>
+      <strong>削除されるデータ</strong>: 匿名ユーザー ID、アプリ内設定（購読したチーム・大会・試合、リマインダー設定、言語・地域・タイムゾーン）、
+      プッシュ通知トークン、通知の配信記録、サブスクリプション情報。<br>
+      <strong>削除後も一定期間残るデータ</strong>: クラッシュ・診断情報（Sentry 上で収集から約 30 日後に自動削除）、
+      外部サービスに送信済みの情報（各社の保持ポリシーに従います）。
+    </p>
+    <p>
+      <strong>サブスクリプションの解約は別途必要です。</strong> アカウントを削除しても、ストアとのサブスクリプション契約自体は解約されません。
+      iOS は「設定」アプリのサブスクリプション、Android は <a href="https://play.google.com/store/account/subscriptions">Google Play の定期購入</a>から解約してください。
+    </p>
+
+    <h3>保存期間</h3>
     <ul>
       <li>ユーザーの情報は、原則としてアカウントが存在する間保存されます。クラッシュ・診断情報（Sentry 上に保存）は、収集から約 30 日間保存された後、自動的に削除されます。</li>
-      <li>ユーザーは、アプリ内の設定画面からいつでもアカウントを削除できます。削除により、匿名ユーザー ID に紐づく設定・購読・通知トークン・配信記録・サブスクリプション情報は運営者のサーバーから削除されます（Apple 上のサブスクリプション契約自体は解約されません。解約は iOS の設定から行ってください）。</li>
       <li>アプリを削除しても、アカウントを削除しない限り、サーバー上の情報は保存され続けます。</li>
       <li>なお、外部サービス（RevenueCat 等）に送信済みの情報は、各社の保持ポリシーに従い一定期間残存する場合があります。</li>
       <li>OS の設定で通知を無効にした場合、以後の通知は配信されません。サーバー上のプッシュ通知トークンは、その後のアプリ起動時または配信失敗の検知時に削除されるほか、アカウント削除時にも削除されます。</li>
@@ -135,11 +174,16 @@
     <section lang="en">
 
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: July 11, 2026</p>
+    <p class="meta">Effective date: July 11, 2026 / Last updated: August 23, 2026</p>
 
     <p>
-      The operator (the &ldquo;Operator&rdquo;) of the iOS application &ldquo;Football Reminder&rdquo; (the &ldquo;App&rdquo;)
-      sets out this Privacy Policy (the &ldquo;Policy&rdquo;) regarding the handling of user information in the App.
+      The operator (the &ldquo;Operator&rdquo;) of the mobile application &ldquo;Football Reminder&rdquo; (available for
+      iOS and Android; the &ldquo;App&rdquo;) sets out this Privacy Policy (the &ldquo;Policy&rdquo;) regarding the
+      handling of user information in the App.
+    </p>
+
+    <p>
+      <strong>To delete your account and data, see <a href="#data-deletion-en">&ldquo;4. Retention and Deletion&rdquo;</a>.</strong>
     </p>
 
     <h2>1. Information We Collect</h2>
@@ -160,7 +204,7 @@
       </tr>
       <tr>
         <td>Subscription information</td>
-        <td>Your Pro subscription status and details of purchase and renewal events (including plan type, expiration date, transaction identifiers, purchase price and currency, and storefront country). Used to provide and manage paid features. Payment details such as credit card numbers are processed by Apple and never reach the Operator.</td>
+        <td>Your Pro subscription status and details of purchase and renewal events (including plan type, expiration date, transaction identifiers, purchase price and currency, and storefront country). Used to provide and manage paid features and to <strong>analyze subscription performance (aggregate metrics such as retention)</strong>. Payment details such as credit card numbers are processed by your app store (Apple on iOS, Google on Android) and never reach the Operator.</td>
       </tr>
       <tr>
         <td>Notification delivery records</td>
@@ -168,7 +212,7 @@
       </tr>
       <tr>
         <td>Crash &amp; diagnostic data</td>
-        <td>Crash logs, device model, OS version, app version, and your anonymous user ID. Used to investigate issues and improve quality.</td>
+        <td>Crash logs, device model, OS version, app version, and your anonymous user ID. Used to investigate individual issues, and to <strong>analyse how crashes occur (aggregate metrics such as the incidence by device, OS and app version)</strong> in order to improve quality and stability.</td>
       </tr>
     </table>
     <p>
@@ -179,42 +223,80 @@
     <h2>2. Purposes of Use and Legal Bases</h2>
     <ul>
       <li>Providing the App's features, such as match reminders</li>
-      <li>Managing paid subscriptions</li>
-      <li>Investigating issues and improving quality and stability</li>
+      <li>Managing paid subscriptions and analyzing subscription performance</li>
+      <li>Investigating issues and analysing how they occur, in order to improve quality and stability</li>
       <li>Addressing violations of the Terms of Service or abuse</li>
     </ul>
     <p>The Operator does not use collected information for advertising and does not sell it to third parties.</p>
     <p>
       For users in the EU/EEA, the legal bases for processing (Article 6 GDPR) are as follows: providing the App's
       features and managing subscriptions is based on the <strong>performance of a contract</strong> (Art. 6(1)(b));
-      collecting crash and diagnostic data and addressing abuse is based on our <strong>legitimate interests</strong>
-      (Art. 6(1)(f); namely, ensuring the quality and security of the service); and collecting your push notification
+      collecting and analysing crash and diagnostic data, addressing abuse, and analysing subscription trends is based on our <strong>legitimate interests</strong>
+      (Art. 6(1)(f); namely, ensuring the quality and security of the service and understanding how it is used in order to improve it); and collecting your push notification
       token is based on your <strong>consent</strong> (Art. 6(1)(a); the OS notification permission). The App does not
       carry out automated decision-making, including profiling.
     </p>
 
     <h2>3. Third-Party Services</h2>
     <p>The App uses the following services to provide its features. The information listed below is transmitted to and stored by these services. The Operator has confirmed that these third parties provide protection of user data equivalent to this Policy:</p>
+    <div class="table-scroll">
     <table>
       <tr><th>Service</th><th>Purpose</th><th>Information sent</th></tr>
       <tr><td>Supabase (database &amp; authentication)</td><td>Anonymous authentication; storage of settings and subscription status</td><td>Anonymous user ID, in-app settings, push notification token, subscription information, notification delivery records. Data is stored in Japan (Tokyo region).</td></tr>
-      <tr><td>Apple (App Store / StoreKit)</td><td>Subscription payment processing</td><td>Payment information for purchases (processed directly by Apple through the OS)</td></tr>
+      <tr><td>Apple (App Store / StoreKit)<br>iOS only</td><td>Subscription payment processing</td><td>Payment information for purchases (processed directly by Apple through the OS)</td></tr>
+      <tr><td>Google (Google Play Billing)<br>Android only</td><td>Subscription payment processing</td><td>Payment information for purchases (processed directly by Google through the OS)</td></tr>
       <tr><td>RevenueCat</td><td>Subscription status management and purchase event processing</td><td>Anonymous user ID, purchase and renewal event information, device information (model and OS version), last seen date</td></tr>
-      <tr><td>Expo (Expo Push Service)</td><td>Push notification delivery</td><td>Push notification token, notification content</td></tr>
+      <tr><td>Expo (Expo Push Service)</td><td>Push notification delivery</td><td>Push notification token, notification content. For delivery, these are forwarded to the platform push service (Apple APNs on iOS, Google Firebase Cloud Messaging on Android).</td></tr>
       <tr><td>Sentry</td><td>Crash and diagnostic data collection and analysis</td><td>Crash logs, device model, OS and app version, anonymous user ID</td></tr>
     </table>
+    </div>
     <p>
-      Some of these services (RevenueCat, Expo, Sentry, etc.) operate servers outside Japan, mainly in the United States.
-      For transfers from the EU/EEA, we rely on appropriate safeguards such as Standard Contractual Clauses (SCCs) or the
-      EU-US Data Privacy Framework (DPF) (as of July 2026: Sentry and Expo are DPF-certified; RevenueCat relies on SCCs. A copy of the safeguards is available on request via the contact below). Japan, where Supabase data is stored, is covered by an adequacy decision of the European Commission. Please refer
-      to each provider's privacy policy for details. No user information is sent to the third-party API from which match
-      data is obtained.
+      Some of the services listed in Section 3 host data outside Japan, or are contracted through an entity outside Japan.
+      As of August 2026, transfers from the EU/EEA, the UK and Switzerland are covered by one of the following safeguards:
+    </p>
+    <ul>
+      <li><strong>Certification under the Data Privacy Framework (EU-U.S. DPF / UK Extension / Swiss-U.S. DPF)</strong>: Sentry (Functional Software, Inc.), Expo (650 Industries, Inc.) and Google LLC.</li>
+      <li><strong>Standard Contractual Clauses (SCCs)</strong>: Supabase (the contracting entity is Supabase Pte. Ltd, Singapore) and RevenueCat. For Apple, personal data relating to individuals in the EEA, the UK and Switzerland is controlled by Apple Distribution International Limited in Ireland, and Apple's own international transfers are governed by SCCs.</li>
+    </ul>
+    <p>
+      A copy of the safeguards is available on request via the contact below.
+      Supabase stores data in the Japan (Tokyo) region, but because the contracting entity is the Singapore company named above, the transfer relies on the SCCs.
+      Please refer to each provider's privacy policy for details. No user information is sent to the third-party API from
+      which match data is obtained.
     </p>
 
-    <h2>4. Retention and Deletion</h2>
+    <h2 id="data-deletion-en">4. Retention and Deletion</h2>
+
+    <h3>How to request deletion of your account and data</h3>
+    <p>
+      You can delete your account yourself at any time from <strong>Settings &gt; Delete Account</strong> in the App.
+      If you have already uninstalled the App, or cannot complete the deletion in the App, email
+      <a href="mailto:support@football-reminder.com">support@football-reminder.com</a>.
+      <strong>We will complete the deletion within 30 days of your request.</strong>
+    </p>
+    <p>
+      ⚠️ <strong>The App uses anonymous authentication only, so an account cannot be identified from your name or email address.</strong>
+      When you request deletion by email, please include information that identifies your account (if you purchased the Pro Plan,
+      your Store order ID). Without it, the Operator may be unable to confirm whether a deletion can be carried out.
+      <strong>If you can still open the App, deleting from within the App is the reliable route.</strong>
+    </p>
+    <p>
+      <strong>Data that is deleted</strong>: your anonymous user ID, in-app settings (teams, competitions and matches you
+      follow; reminder settings; language, region and time zone), push notification token, notification delivery records,
+      and subscription information.<br>
+      <strong>Data that remains for a limited period</strong>: crash and diagnostic data (automatically deleted from
+      Sentry approximately 30 days after collection) and information already transmitted to third-party services, which
+      is retained in accordance with each provider's policy.
+    </p>
+    <p>
+      <strong>Canceling your subscription is a separate step.</strong> Deleting your account does not cancel your
+      subscription contract with the store. Cancel it in the Subscriptions section of the iOS Settings app, or in
+      <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a> on Android.
+    </p>
+
+    <h3>Retention</h3>
     <ul>
       <li>Your information is retained, in principle, for as long as your account exists. Crash and diagnostic data (stored in Sentry) is automatically deleted approximately 30 days after collection.</li>
-      <li>You may delete your account at any time from the in-app settings screen. Upon deletion, the settings, follows, notification tokens, delivery records, and subscription information tied to your anonymous user ID are deleted from the Operator's servers (your subscription contract with Apple itself is not canceled; cancel it in the iOS Settings).</li>
       <li>Deleting the App alone does not delete your information; data on the server is retained unless you delete your account.</li>
       <li>Information already transmitted to third-party services (RevenueCat, etc.) may remain for a certain period in accordance with each provider's retention policy.</li>
       <li>If you disable notifications in the OS settings, no further notifications are delivered. Your push notification token on the server is deleted on a subsequent app launch or when a delivery failure is detected, and is also deleted when you delete your account.</li>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- token がクエリに乗るため、Referer での外部漏洩と検索インデックスを止める -->
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Reviewer Access - Football Reminder</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="site-header"><a href="../">&larr; Football Reminder</a></div>
+  <main>
+    <h1>Reviewer Access</h1>
+    <p class="meta">For app review only</p>
+
+    <div id="ready" hidden>
+      <p>
+        This link unlocks the Pro features of <strong>Football Reminder</strong> on this device, so that all
+        subscription-only functionality can be reviewed without making a purchase.
+      </p>
+      <ol>
+        <li><strong>Install the app first</strong> from Google Play. The button below does nothing until the app is installed.</li>
+        <li>Then tap the button. The app opens and unlocks Pro automatically.</li>
+      </ol>
+      <p><a id="open" class="unlock-button" href="#">Open Football Reminder and unlock Pro</a></p>
+    </div>
+
+    <!-- JS 無効だと #ready / #nolink がどちらも hidden のまま = 完全な白紙になるため、案内を 1 つ出す -->
+    <noscript>
+      <p>
+        This page needs JavaScript to build the access link. Please enable JavaScript and reload the
+        full URL provided with the app review submission.
+      </p>
+    </noscript>
+
+    <div id="nolink" hidden>
+      <p>
+        This page only works when it is opened from the access link provided with the app review submission.
+      </p>
+      <p>
+        Please open the full URL exactly as it was given to you, including everything after the
+        <code>?</code>. If you reached this page by typing the address or following a shortened link,
+        the access parameter was lost along the way.
+      </p>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 Football Reminder
+  </footer>
+  <script>
+    // token は自分の URL のクエリからのみ読む。ページにも履歴にも埋め込まない。
+    var t = new URLSearchParams(location.search).get("t");
+    if (t && /^[0-9a-f]{32,}$/.test(t)) {
+      // hex のみなのでエンコード不要。そのまま埋める。
+      document.getElementById("open").href = "football-reminder://review-access?t=" + t;
+      document.getElementById("ready").hidden = false;
+    } else {
+      // 空 / 不正な token でアプリを開くと審査担当者がエラー画面に着地するため、リンクを出さない。
+      document.getElementById("nolink").hidden = false;
+    }
+  </script>
+</body>
+</html>
