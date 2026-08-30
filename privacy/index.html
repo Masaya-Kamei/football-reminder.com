@@ -46,6 +46,10 @@
         <td>リマインダー通知の配信日時・結果・エラー情報。通知の重複配信の防止と不具合の調査に使用します。</td>
       </tr>
       <tr>
+        <td>アプリの起動日</td>
+        <td>アプリを起動した日付（日単位。時刻や回数は記録しません）。<strong>継続利用状況の分析（何人が翌日・翌週も利用しているかなどの集計）</strong>によるサービス改善に使用します。</td>
+      </tr>
+      <tr>
         <td>クラッシュ・診断情報</td>
         <td>アプリのクラッシュログ、端末機種、OS バージョン、アプリバージョン、匿名ユーザー ID。個別の不具合の調査に使用するほか、<strong>発生状況の分析（端末・OS・アプリバージョン別の発生傾向などの集計）</strong>による品質・安定性の改善に使用します。</td>
       </tr>
@@ -59,6 +63,7 @@
       <li>試合リマインダー等、本アプリの機能の提供</li>
       <li>有料プラン（サブスクリプション）の管理と、購読状況の分析</li>
       <li>不具合の調査と、発生状況の分析による品質・安定性の改善</li>
+      <li>継続利用状況の分析によるサービス改善</li>
       <li>利用規約違反・不正利用への対応</li>
     </ul>
     <p>運営者は、収集した情報を広告目的で利用せず、第三者に販売しません。</p>
@@ -75,7 +80,7 @@
     <div class="table-scroll">
     <table>
       <tr><th>サービス</th><th>用途</th><th>送信される情報</th></tr>
-      <tr><td>Supabase（データベース・認証）</td><td>匿名認証、設定・サブスクリプション状態の保存</td><td>匿名ユーザー ID、アプリ内設定、プッシュ通知トークン、サブスクリプション情報、通知の配信記録。データの保存先は日本（東京リージョン）です。</td></tr>
+      <tr><td>Supabase（データベース・認証）</td><td>匿名認証、設定・サブスクリプション状態の保存</td><td>匿名ユーザー ID、アプリ内設定、プッシュ通知トークン、サブスクリプション情報、通知の配信記録、アプリの起動日。データの保存先は日本（東京リージョン）です。</td></tr>
       <tr><td>Apple（App Store / StoreKit）<br>※ iOS 版のみ</td><td>サブスクリプションの決済処理</td><td>購入操作に伴う決済情報（OS を通じて Apple が直接処理）</td></tr>
       <tr><td>Google（Google Play Billing）<br>※ Android 版のみ</td><td>サブスクリプションの決済処理</td><td>購入操作に伴う決済情報（OS を通じて Google が直接処理）</td></tr>
       <tr><td>RevenueCat</td><td>サブスクリプション状態の管理・購入イベントの処理</td><td>匿名ユーザー ID、購入・更新イベント情報、端末情報（機種・OS バージョン）、最終利用日時</td></tr>
@@ -114,7 +119,7 @@
     </p>
     <p>
       <strong>削除されるデータ</strong>: 匿名ユーザー ID、アプリ内設定（購読したチーム・大会・試合、リマインダー設定、言語・地域・タイムゾーン）、
-      プッシュ通知トークン、通知の配信記録、サブスクリプション情報。<br>
+      プッシュ通知トークン、通知の配信記録、サブスクリプション情報、アプリの起動日。<br>
       <strong>削除後も一定期間残るデータ</strong>: クラッシュ・診断情報（Sentry 上で収集から約 30 日後に自動削除）、
       外部サービスに送信済みの情報（各社の保持ポリシーに従います）。
     </p>
@@ -207,6 +212,12 @@
         <td>Your Pro subscription status and details of purchase and renewal events (including plan type, expiration date, transaction identifiers, purchase price and currency, and storefront country). Used to provide and manage paid features and to <strong>analyze subscription performance (aggregate metrics such as retention)</strong>. Payment details such as credit card numbers are processed by your app store (Apple on iOS, Google on Android) and never reach the Operator.</td>
       </tr>
       <tr>
+        <td>App launch dates</td>
+        <td>The dates on which you opened the app (day-level only; we do not record times or how many times you opened
+          it). Used to <strong>analyse continued use (aggregate metrics such as how many people return the next day or
+          the following week)</strong> in order to improve the service.</td>
+      </tr>
+      <tr>
         <td>Notification delivery records</td>
         <td>Delivery date and time, result, and error information for reminder notifications. Used to prevent duplicate notifications and investigate issues.</td>
       </tr>
@@ -225,6 +236,7 @@
       <li>Providing the App's features, such as match reminders</li>
       <li>Managing paid subscriptions and analyzing subscription performance</li>
       <li>Investigating issues and analysing how they occur, in order to improve quality and stability</li>
+      <li>Analysing continued use in order to improve the service</li>
       <li>Addressing violations of the Terms of Service or abuse</li>
     </ul>
     <p>The Operator does not use collected information for advertising and does not sell it to third parties.</p>
@@ -242,7 +254,7 @@
     <div class="table-scroll">
     <table>
       <tr><th>Service</th><th>Purpose</th><th>Information sent</th></tr>
-      <tr><td>Supabase (database &amp; authentication)</td><td>Anonymous authentication; storage of settings and subscription status</td><td>Anonymous user ID, in-app settings, push notification token, subscription information, notification delivery records. Data is stored in Japan (Tokyo region).</td></tr>
+      <tr><td>Supabase (database &amp; authentication)</td><td>Anonymous authentication; storage of settings and subscription status</td><td>Anonymous user ID, in-app settings, push notification token, subscription information, notification delivery records, app launch dates. Data is stored in Japan (Tokyo region).</td></tr>
       <tr><td>Apple (App Store / StoreKit)<br>iOS only</td><td>Subscription payment processing</td><td>Payment information for purchases (processed directly by Apple through the OS)</td></tr>
       <tr><td>Google (Google Play Billing)<br>Android only</td><td>Subscription payment processing</td><td>Payment information for purchases (processed directly by Google through the OS)</td></tr>
       <tr><td>RevenueCat</td><td>Subscription status management and purchase event processing</td><td>Anonymous user ID, purchase and renewal event information, device information (model and OS version), last seen date</td></tr>
@@ -283,7 +295,7 @@
     <p>
       <strong>Data that is deleted</strong>: your anonymous user ID, in-app settings (teams, competitions and matches you
       follow; reminder settings; language, region and time zone), push notification token, notification delivery records,
-      and subscription information.<br>
+      subscription information, and app launch dates.<br>
       <strong>Data that remains for a limited period</strong>: crash and diagnostic data (automatically deleted from
       Sentry approximately 30 days after collection) and information already transmitted to third-party services, which
       is retained in accordance with each provider's policy.
