@@ -10,7 +10,7 @@
   <div class="site-header"><a href="../">&larr; Football Reminder</a></div>
   <main>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">制定日: 2026年7月11日 / 最終更新日: 2026年9月3日（English version follows the Japanese version.）</p>
+    <p class="meta">制定日: 2026年7月11日 / 最終更新日: 2026年9月18日（English version follows the Japanese version.）</p>
 
     <p>
       モバイルアプリケーション「Football Reminder」（iOS 版および Android 版。以下「本アプリ」）の運営者（以下「運営者」）は、
@@ -76,7 +76,7 @@
       EU/EEA 圏のユーザーに対する処理の法的根拠（GDPR 第 6 条）は次のとおりです:
       本アプリの機能提供およびサブスクリプション管理は<strong>契約の履行</strong>（第 6 条 1 項 (b)）、
       クラッシュ・診断情報の収集と分析、不正利用への対応、購読状況の分析、およびお問い合わせへの対応は<strong>正当な利益</strong>（同項 (f)。サービスの品質・安全性の確保、サービス改善のための利用状況の把握、およびお問い合わせに回答するという利益）、
-      プッシュ通知トークンの取得は<strong>同意</strong>（同項 (a)。OS の通知許可）に基づきます。
+      プッシュ通知トークンの取得は<strong>同意</strong>（同項 (a)。OS の通知許可）に基づきます。Android 版で通知機能のために Google Firebase とやり取りする識別子（第 3 節）は、<strong>正当な利益</strong>（同項 (f)。通知機能を提供できる状態を保つという利益）に基づきます。
       本アプリは、プロファイリングを含む自動化された意思決定を行いません。
     </p>
 
@@ -90,6 +90,7 @@
       <tr><td>Google（Google Play Billing）<br>※ Android 版のみ</td><td>サブスクリプションの決済処理</td><td>購入操作に伴う決済情報（OS を通じて Google が直接処理）</td></tr>
       <tr><td>RevenueCat</td><td>サブスクリプション状態の管理・購入イベントの処理</td><td>匿名ユーザー ID、購入・更新イベント情報、端末情報（機種・OS バージョン）、最終利用日時</td></tr>
       <tr><td>Expo（Expo Push Service）</td><td>プッシュ通知の配信</td><td>プッシュ通知トークン、通知の内容。配信にあたり、各 OS のプッシュ配信基盤（iOS: Apple APNs / Android: Google Firebase Cloud Messaging）へ転送されます。</td></tr>
+      <tr><td>Google（Firebase Cloud Messaging）<br>※ Android 版のみ</td><td>プッシュ通知を受け取るための端末の登録</td><td>Firebase インストール ID（アプリのインストールごとの識別子）、FCM 登録トークン、アプリのバージョン、SDK の種類・バージョン等。<strong>通知の許可の有無にかかわらず、アプリの起動時に端末が Google に登録されます（このとき端末が Google と直接通信します）。</strong></td></tr>
       <tr><td>Sentry</td><td>クラッシュ・診断情報の収集と分析</td><td>クラッシュログ、端末機種、OS・アプリバージョン、匿名ユーザー ID</td></tr>
     </table>
     </div>
@@ -188,7 +189,7 @@
     <section lang="en">
 
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: July 11, 2026 / Last updated: September 3, 2026</p>
+    <p class="meta">Effective date: July 11, 2026 / Last updated: September 18, 2026</p>
 
     <p>
       The operator (the &ldquo;Operator&rdquo;) of the mobile application &ldquo;Football Reminder&rdquo; (available for
@@ -259,7 +260,9 @@
       features and managing subscriptions is based on the <strong>performance of a contract</strong> (Art. 6(1)(b));
       collecting and analysing crash and diagnostic data, addressing abuse, analysing subscription trends, and responding to your enquiries is based on our <strong>legitimate interests</strong>
       (Art. 6(1)(f); namely, ensuring the quality and security of the service, understanding how it is used in order to improve it, and replying to the enquiries you send us); and collecting your push notification
-      token is based on your <strong>consent</strong> (Art. 6(1)(a); the OS notification permission). The App does not
+      token is based on your <strong>consent</strong> (Art. 6(1)(a); the OS notification permission). The identifiers that
+      the Android version exchanges with Google Firebase for the notification feature (Section 3) are based on our
+      <strong>legitimate interests</strong> (Art. 6(1)(f); keeping the notification feature available). The App does not
       carry out automated decision-making, including profiling.
     </p>
 
@@ -273,6 +276,7 @@
       <tr><td>Google (Google Play Billing)<br>Android only</td><td>Subscription payment processing</td><td>Payment information for purchases (processed directly by Google through the OS)</td></tr>
       <tr><td>RevenueCat</td><td>Subscription status management and purchase event processing</td><td>Anonymous user ID, purchase and renewal event information, device information (model and OS version), last seen date</td></tr>
       <tr><td>Expo (Expo Push Service)</td><td>Push notification delivery</td><td>Push notification token, notification content. For delivery, these are forwarded to the platform push service (Apple APNs on iOS, Google Firebase Cloud Messaging on Android).</td></tr>
+      <tr><td>Google (Firebase Cloud Messaging)<br>Android version only</td><td>Registering the device to receive push notifications</td><td>Firebase installation ID (a per-installation identifier), FCM registration token, app version, SDK type and version, and similar data. <strong>The device is registered with Google, communicating with Google directly, when the App starts, regardless of whether you allow notifications.</strong></td></tr>
       <tr><td>Sentry</td><td>Crash and diagnostic data collection and analysis</td><td>Crash logs, device model, OS and app version, anonymous user ID</td></tr>
     </table>
     </div>
