@@ -5,5 +5,7 @@
 - `/` — ランディングページ
 - `/terms/` — 利用規約 / Terms of Service
 - `/privacy/` — プライバシーポリシー / Privacy Policy
+- `/tokushoho/` — 特定商取引法に基づく表記 / Notice under the Act on Specified Commercial Transactions
+- `/review-access/` — ストア審査用のページ
 
 法務文書の実体はこのリポジトリが SoT。変更は本リポジトリへの push で即時公開される。
