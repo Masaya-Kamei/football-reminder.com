@@ -102,9 +102,22 @@ th {
   margin-bottom: 20px;
 }
 
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .store-badge img {
   height: 54px;
   width: auto;
+}
+
+/* Google の公式画像は周りに余白を含むので、App Store のバッジと見た目の高さを揃えるために大きくする */
+.store-badge-play img {
+  height: 70px;
 }
 
 .screenshots {
