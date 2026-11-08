@@ -76,6 +76,12 @@ th {
   white-space: nowrap;
 }
 
+/* トップページの言語の出し分け。show-* は index.html の先頭のスクリプトが html に付ける */
+.show-en [lang="ja"],
+.show-ja [lang="en"] {
+  display: none;
+}
+
 .meta {
   color: var(--text-secondary);
   font-size: 0.85rem;
@@ -118,6 +124,11 @@ th {
 /* Google の公式画像は周りに余白を含むので、App Store のバッジと見た目の高さを揃えるために大きくする */
 .store-badge-play img {
   height: 70px;
+}
+
+/* 英語の画像は日本語より余白が広いので、見た目の高さを 54px に揃えるにはさらに大きくする */
+.store-badges[lang="en"] .store-badge-play img {
+  height: 80px;
 }
 
 .screenshots {

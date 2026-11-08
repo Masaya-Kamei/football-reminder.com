@@ -7,32 +7,51 @@
   <meta name="description" content="Football Reminder は、お気に入りのサッカーチーム・大会の試合を追跡し、キックオフ前にリマインド通知を受け取れるモバイルアプリです。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Football Reminder">
-  <meta property="og:title" content="Football Reminder - サッカーの試合、見逃さない。">
-  <meta property="og:description" content="お気に入りのサッカーチーム・大会の試合を追跡し、キックオフ前にリマインド通知を受け取れるモバイルアプリ。">
+  <meta property="og:title" content="Football Reminder - Match reminders for football fans">
+  <meta property="og:description" content="A mobile app that tracks matches of your favorite football teams and competitions, and sends you reminder notifications before kickoff.">
   <meta property="og:url" content="https://football-reminder.com/">
-  <meta property="og:image" content="https://football-reminder.com/images/ogp.png">
+  <meta property="og:image" content="https://football-reminder.com/images/ogp.png?v=2">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/app-icon.png">
+  <script>
+    // ブラウザの言語が日本語なら日本語、それ以外は英語を出す（?lang=ja / ?lang=en で強制切替可）。
+    // 描画の前に決めて、もう一方の言語が一瞬見えないようにする。JavaScript が無いときは両方を出す
+    (function () {
+      var lang = new URLSearchParams(location.search).get("lang") || navigator.language || "ja";
+      var shown = lang.startsWith("ja") ? "ja" : "en";
+      document.documentElement.lang = shown;
+      document.documentElement.classList.add("show-" + shown);
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
     <div class="hero">
-      <img class="app-icon" src="images/app-icon.png" alt="Football Reminder アプリアイコン" width="96" height="96">
+      <img class="app-icon" src="images/app-icon.png" alt="Football Reminder" width="96" height="96">
       <h1>Football Reminder</h1>
-      <p class="meta">サッカーの試合、見逃さない。 / Match reminders for football fans</p>
-      <div class="store-badges">
+      <p class="meta" lang="ja">サッカーの試合、見逃さない。</p>
+      <p class="meta" lang="en">Match reminders for football fans</p>
+      <div class="store-badges" lang="ja">
         <a class="store-badge" href="https://apps.apple.com/app/football-reminder/id6775495012">
-          <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/ja-jp" alt="App Store でダウンロード" height="54">
+          <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/ja-jp" alt="App Store でダウンロード" height="54" loading="lazy">
         </a>
         <a class="store-badge store-badge-play" href="https://play.google.com/store/apps/details?id=com.footballreminder.app">
-          <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" height="70">
+          <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" height="70" loading="lazy">
+        </a>
+      </div>
+      <div class="store-badges" lang="en">
+        <a class="store-badge" href="https://apps.apple.com/app/football-reminder/id6775495012">
+          <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" height="54" loading="lazy">
+        </a>
+        <a class="store-badge store-badge-play" href="https://play.google.com/store/apps/details?id=com.footballreminder.app">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80" loading="lazy">
         </a>
       </div>
     </div>
 
-    <p>
+    <p lang="ja">
       Football Reminder は、お気に入りのサッカーチーム・大会の試合を追跡し、キックオフ前にリマインド通知を受け取れるモバイルアプリです。
       J リーグ、プレミアリーグなどの試合予定をアプリで確認し、見逃したくない試合の通知時刻を自由に設定できます。
     </p>
@@ -41,7 +60,8 @@
       reminder notifications before kickoff.
     </p>
 
-    <h2>スクリーンショット / Screenshots</h2>
+    <h2 lang="ja">スクリーンショット</h2>
+    <h2 lang="en">Screenshots</h2>
     <div class="screenshots">
       <img src="images/01_match_list.png" alt="試合一覧画面 / Match list" loading="lazy" width="320" height="692">
       <img src="images/02_reminder_settings.png" alt="リマインダー時刻の設定 / Reminder time settings" loading="lazy" width="320" height="692">
@@ -49,29 +69,40 @@
       <img src="images/04_filter.png" alt="大会・チームでの絞り込み / Filter by competition and team" loading="lazy" width="320" height="692">
     </div>
 
-    <h2>リンク / Links</h2>
+    <h2 lang="ja">リンク</h2>
+    <h2 lang="en">Links</h2>
     <ul>
-      <li><a href="terms/">利用規約 / Terms of Service</a></li>
-      <li><a href="privacy/">プライバシーポリシー / Privacy Policy</a></li>
-      <li><a href="tokushoho/">特定商取引法に基づく表記 / Notice under the Japanese Act on Specified Commercial Transactions</a></li>
+      <li lang="ja"><a href="terms/">利用規約</a></li>
+      <li lang="en"><a href="terms/">Terms of Service</a></li>
+      <li lang="ja"><a href="privacy/">プライバシーポリシー</a></li>
+      <li lang="en"><a href="privacy/">Privacy Policy</a></li>
+      <li lang="ja"><a href="tokushoho/">特定商取引法に基づく表記</a></li>
+      <li lang="en"><a href="tokushoho/">Notice under the Japanese Act on Specified Commercial Transactions</a></li>
     </ul>
 
-    <h2>サポート / Support</h2>
-    <p>
-      お問い合わせ / Contact: <a href="mailto:support@football-reminder.com">support@football-reminder.com</a>
+    <h2 lang="ja">サポート</h2>
+    <h2 lang="en">Support</h2>
+    <p lang="ja">
+      お問い合わせ: <a href="mailto:support@football-reminder.com">support@football-reminder.com</a>
+    </p>
+    <p lang="en">
+      Contact: <a href="mailto:support@football-reminder.com">support@football-reminder.com</a>
     </p>
   </main>
   <footer>
     &copy; 2026 Football Reminder
   </footer>
   <script>
-    // ブラウザ言語が日本語以外なら英語版スクリーンショットに差し替える（?lang=ja / ?lang=en で強制切替可）
-    var lang = new URLSearchParams(location.search).get("lang") || navigator.language || "ja";
-    if (!lang.startsWith("ja")) {
+    // 英語のときはスクリーンショットを英語版に差し替え、代替テキストも画面の言語の側だけにする
+    (function () {
+      var en = document.documentElement.lang === "en";
       document.querySelectorAll(".screenshots img").forEach(function (img) {
-        img.src = img.getAttribute("src").replace("images/", "images/en/");
+        if (en) {
+          img.src = img.getAttribute("src").replace("images/", "images/en/");
+        }
+        img.alt = img.alt.split(" / ")[en ? 1 : 0];
       });
-    }
+    })();
   </script>
 </body>
 </html>
